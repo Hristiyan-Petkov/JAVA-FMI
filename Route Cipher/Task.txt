@@ -1,0 +1,28 @@
+Decryption
+To decrypt a message receivedthat has been encoded with
+the Route Cipher, we need to know the route 
+used and the width or height of the grid. We then start by
+constructing a blank grid of the right size, and then place the 
+ciphertext letters in the grid following the route specified.For example, 
+to decrypt the ciphertext "TIEIXTXXEAHSIHSPNTLT" with the route spiral 
+inwards counterclockwisefrom the top right, with a grid width of 4, we follow
+the process shown aboveto obtain the text THISISTHEPLAINTEXT.
+
+Encryption
+First we write the plaintext in a block of reasonable size for
+the plaintext. Part of your key is the size of this grid, 
+so you need to decide on either a number of columns or number 
+of rows in the grid before starting. Once thecharacters of theplaintext 
+are written out sequentially out in the grid, you use the Route assigned. 
+This could be spiraling inwards starting from the top leftcorner in a 
+counterclockwise directionin case the key is positive, or spiraling inwards
+starting from the bottom right corner in a counterclockwisedirectionin 
+case the key is negative.Thus, the key absolute value determines the number
+of the columns in the grid, while the sign of the key determines the 
+orientation of the route for encryption and decryption.As an example, 
+lets encrypt the plaintext "ABORT THE MISSION, YOU HAVE BEEN SPOTTED".
+Assume the key is a signed integer value, whose absolute value defines 
+the number of the columns. For clarity, let’s say -5. The absolute value 
+of the key determines that cipher will use a grid with 5 columns. 
+The above figure shows how the sample plaintext is written in a grid 
+of five columns, where the number of the rows depends on the length of the plaintext.
